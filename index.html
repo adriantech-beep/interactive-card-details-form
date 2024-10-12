@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="frontendmentor.io" content="adrian.dev" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="shortcut icon"
+      href="images/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Interactive Card Form</title>
+  </head>
+  <body>
+    <header>
+      <p>Interactive Card Form</p>
+    </header>
+    <main>
+      <!------------first section image------------>
+      <section class="left-image__section">
+        <img
+          src="images/bg-main-desktop.png"
+          alt="a desktop image"
+          class="left-image__desktop"
+        />
+        <img
+          src="images/bg-main-mobile.png"
+          alt="a mobile image"
+          class="left-image__mobile"
+        />
+      </section>
+      <!------------second section inputs----------->
+      <div class="input-section">
+        <form class="input-section__main">
+          <!-------name input--------------->
+          <div class="input-section__inner">
+            <div class="input-name">
+              <label for="name">CARDHOLDER NAME</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="e.g. Jane Appleseed"
+                autocomplete="additional-name"
+              />
+              <p class="error-message__name">Please enter your name</p>
+            </div>
+            <!----------number input------------>
+            <div class="input-number">
+              <label for="card-number">CARD NUMBER</label>
+              <input
+                type="text"
+                id="card-number"
+                name="number"
+                placeholder="e.g. 1234 5678 9123 0000"
+              />
+              <p class="error-message__number">Wrong format, numbers only</p>
+            </div>
+            <!---------------date input------------>
+            <div class="input-date__expiry">
+              <p>EXP. DATE (MM/YY)</p>
+              <p>CVC</p>
+            </div>
+            <div class="input-dates__group">
+              <label for="month"></label>
+              <input type="text" id="month" name="month" placeholder="MM" />
+              <label for="year"></label>
+              <input type="text" id="year" name="year" placeholder="YY" />
+              <label for="cvc"></label>
+              <input type="text" id="cvc" name="cvc" placeholder="e.g. 123" />
+            </div>
+            <div class="error-box__dates">
+              <p class="error-message__monthyear">Can't be blank</p>
+              <p class="error-message__cvc">Can't be blank</p>
+            </div>
+            <!-------------confirm button-->
+            <button class="confirm-btn">Confirm</button>
+          </div>
+          <!--------------success modal----------->
+          <div class="success-modal hidden">
+            <div class="img-completed">
+              <img src="images/icon-complete.svg" alt="an icon complete" />
+            </div>
+            <p class="text">THANK YOU!</p>
+            <p class="paragraph">We've added your card details</p>
+            <button class="btn-continue">Continue</button>
+          </div>
+        </form>
+      </div>
+      <!----------------------cards section--------------------->
+      <section class="hero-card-section">
+        <div class="hero-container">
+          <div class="card-front__container">
+            <img src="images/bg-card-front.png" alt="a card image" />
+            <div class="card-front__inner">
+              <div class="card-front__logo">
+                <img src="images/card-logo.svg" alt="a card logo" />
+              </div>
+              <div class="card-front__number">
+                <p class="card-number__output">9591 6489 6389 101E</p>
+              </div>
+              <div class="card-front__name">
+                <p class="card-name__output">FELICIA LERIE</p>
+                <p class="card-month__output">9/00</p>
+              </div>
+            </div>
+          </div>
+          <div class="card-back__container">
+            <img src="images/bg-card-back.png" alt="a card image" />
+            <div class="card-back__cvc">
+              <p class="card-cvc__output">0000</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- <footer><p>
+        Challenge by Frontend Mentor. Coded by Your Adrian.dev.
+    </p></footer> -->
+    <script src="script.js"></script>
+  </body>
+</html>
